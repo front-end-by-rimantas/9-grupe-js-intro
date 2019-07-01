@@ -42,3 +42,37 @@ console.log( tiesa );
 var melas = false;
 console.log( melas );
 
+/****************************
+ * VEIKSMAI SU KINTAMAISIAIS
+ ****************************/
+
+console.log('****************************');
+console.log('* VEIKSMAI SU KINTAMAISIAIS');
+console.log('****************************');
+
+console.log( 2+2*2 );
+console.log( 'Vardenis' + ' ' + 'Pavardenis' );
+
+var amzius = 31.66;
+console.log( 'Man yra ' + amzius + ' metu.' );
+
+// console.log( a + '+' + b + '=' + (a+b) );
+
+console.log( '1 + ' + b + ' = 3' );
+
+console.log('----------------');
+
+console.log( marks );
+var sum_of_marks = marks[0] + marks[1] + marks[2] + marks[3] + marks[4];
+console.log( sum_of_marks );
+
+console.log( 'Pazymiu vidurkis: ' + (sum_of_marks / marks.length) );
+
+
+console.log('----------------');
+
+var abc = ['a', 'b', 'c', 'd'];
+console.log( abc );
+
+var atbula_abc = abc[3] + ', ' + abc[2] + ', ' + abc[1] + ', ' + abc[0];
+console.log( atbula_abc );
