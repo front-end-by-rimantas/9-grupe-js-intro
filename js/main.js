@@ -76,3 +76,52 @@ console.log( abc );
 
 var atbula_abc = abc[3] + ', ' + abc[2] + ', ' + abc[1] + ', ' + abc[0];
 console.log( atbula_abc );
+
+
+/****************************
+ * KINTAMUJU PALYGINIMAS
+ ****************************/
+
+console.log('****************************');
+console.log('* KINTAMUJU PALYGINIMAS');
+console.log('****************************');
+
+var temp = 36;
+
+// 36.2 > temp < 36.6
+
+if ( temp > 36.6 ) {
+    console.log( 'Jap, tavo temperatura per auksta' );
+}
+
+if ( temp < 36.2 ) {
+    console.log( 'Jap, tavo temperatura per zema' );
+}
+
+
+var skaicius = 20;
+
+if ( skaicius > 0 ) {
+    console.log( skaicius + ' yra teigiamas.' );
+} else if ( skaicius == 0 ) {
+    console.log( 'Sorry, nulis yra nulis....' );
+} else {
+    console.log( skaicius + ' yra neigiamas.' );
+}
+
+// a > b
+// a < b
+// a == b
+// a >= b
+// a <= b
+// a != b
+// a === b
+// a !== b
+
+console.log('-------------');
+
+if ( 5 > '5' ) {
+    console.log( 'taip' );
+} else {
+    console.log( 'ne' );
+}
