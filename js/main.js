@@ -170,3 +170,22 @@ for ( var i=tekstas.length - 1; i>=0; i-- ) {
     atbulas = atbulas + tekstas[i];
 }
 console.log('Atbulas tekstas: ' + atbulas);
+
+console.log('-------------');
+console.log('Dalyba be liekanos intervale');
+
+var nuo = 0,
+    iki = 11,
+    daliklis = 4,
+    kiekis = 0;
+
+// logika
+for ( var i=nuo; i<=iki; i++ ) {
+    console.log( i, '%', daliklis, ' = ', (i - i%daliklis) / daliklis, 'sveiku ir ', i%daliklis, 'liekana' );
+    
+    if ( i % daliklis === 0 ) {
+        kiekis++;
+    }
+}
+
+console.log( 'Skaičių intervale tarp '+nuo+' ir '+iki+', besidalinančių be liekanos iš '+daliklis+' yra '+kiekis+' vienetai.' );
