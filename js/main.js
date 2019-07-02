@@ -159,9 +159,14 @@ for ( var i=nuo; i<=iki; i++ ) {
 }
 
 console.log('-------------');
+console.log('Atbulas tekstas');
 
-var tekstas = 'abcdef';
 
-for ( var i=0; i<5; i++ ) {
-    console.log(  );
+var tekstas = 'abcdef',
+    atbulas = '';
+
+for ( var i=tekstas.length - 1; i>=0; i-- ) {
+    console.log( tekstas[i] );
+    atbulas = atbulas + tekstas[i];
 }
+console.log('Atbulas tekstas: ' + atbulas);
