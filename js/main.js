@@ -125,3 +125,43 @@ if ( 5 > '5' ) {
 } else {
     console.log( 'ne' );
 }
+
+
+
+/****************************
+ * FOR LOOP (ciklas)
+ ****************************/
+
+console.log('****************************');
+console.log('* FOR LOOP (ciklas)');
+console.log('****************************');
+
+var list = ['as', 'sd', 'df', 'fg', 'df', 'fg', 'df', 'fg', 'df', 'fg'];
+console.log(list);
+
+for ( var i=0; i<list.length; i++ ) {
+    console.log( i + ' - ' + list[i] );
+}
+
+
+
+console.log('-------------');
+console.log('skaiciu suma intervale');
+
+
+var nuo = 0,
+    iki = 4,
+    suma = 0;
+
+for ( var i=nuo; i<=iki; i++ ) {
+    suma = suma + i;
+    console.log(suma);
+}
+
+console.log('-------------');
+
+var tekstas = 'abcdef';
+
+for ( var i=0; i<5; i++ ) {
+    console.log(  );
+}
