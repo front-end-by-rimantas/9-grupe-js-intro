@@ -242,3 +242,69 @@ console.log( daugyba( NaN, 5 ) );
 console.log( daugyba( 2, 3 ) );
 console.log( daugyba( -5, 4 ) );
 console.log( daugyba( 0, 0 ) );
+
+
+console.log('-------------');
+console.log('Skaitmenu kiekis skaiciuje');
+
+function skaitmenuKiekisSkaiciuje( skaicius ) {
+    var kiekis = 0,
+        tekstas = ''+skaicius;
+
+    if ( typeof(skaicius) !== 'number' ||
+         !isFinite(skaicius) ) {
+        return 'Pateikta netinkamo tipo reikšmė.';
+    }
+
+
+    if ( tekstas.indexOf('e') >= 0 ) {
+        // issiskaidome aplink e
+        let sudedamosiosSkaiciausDalys = tekstas.split('e');
+        console.log(sudedamosiosSkaiciausDalys);
+        
+        // kiekis + pirma dalis
+        kiekis = kiekis + 1;
+        // kiekis = kiekis + sudedamosiosSkaiciausDalys[0].length;
+
+        // kiekis + antra dalis
+        kiekis = kiekis + parseInt( sudedamosiosSkaiciausDalys[1] );
+
+    } else {
+        // logika
+        kiekis = tekstas.length;
+
+        for ( var i=0; i<tekstas.length; i++ ) {
+            if ( tekstas[i] === '.' ||
+                 tekstas[i] === ',' ||
+                 tekstas[i] === '-' ||
+                 tekstas[i] === '+' ) {
+                kiekis--;
+            }
+        }
+    }
+
+
+    return skaicius + ' (' + kiekis + ')';
+}
+
+console.log( skaitmenuKiekisSkaiciuje( true ) );
+console.log( skaitmenuKiekisSkaiciuje( "asd" ) );
+console.log( skaitmenuKiekisSkaiciuje( NaN ) );
+console.log( skaitmenuKiekisSkaiciuje( Infinity ) );
+
+console.log( skaitmenuKiekisSkaiciuje( 5 ) );
+console.log( skaitmenuKiekisSkaiciuje( 781 ) );
+console.log( skaitmenuKiekisSkaiciuje( 37060123456 ) );
+console.log( skaitmenuKiekisSkaiciuje( 3.14 ) );
+console.log( skaitmenuKiekisSkaiciuje( Math.PI ) );
+console.log( skaitmenuKiekisSkaiciuje( -314 ) );
+console.log( skaitmenuKiekisSkaiciuje( -3.14 ) );
+console.log( skaitmenuKiekisSkaiciuje( +314 ) );
+console.log( skaitmenuKiekisSkaiciuje( +3.14 ) );
+console.log( skaitmenuKiekisSkaiciuje( 2+2*2 ) );
+console.log( skaitmenuKiekisSkaiciuje( 2**3 ) );
+console.log( skaitmenuKiekisSkaiciuje( 1/3 ) );
+console.log( skaitmenuKiekisSkaiciuje( 1000000000000000000000000000000000000000 ) );
+console.log( skaitmenuKiekisSkaiciuje( 1e+21 ) );
+console.log( skaitmenuKiekisSkaiciuje( -0.123456789012345678901234567890123456789 ) );
+// console.log( skaitmenuKiekisSkaiciuje( 1e-30 ) );
