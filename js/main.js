@@ -267,7 +267,7 @@ function skaitmenuKiekisSkaiciuje( skaicius ) {
         // kiekis = kiekis + sudedamosiosSkaiciausDalys[0].length;
 
         // kiekis + antra dalis
-        kiekis = kiekis + parseInt( sudedamosiosSkaiciausDalys[1] );
+        kiekis = kiekis + Math.abs( parseInt( sudedamosiosSkaiciausDalys[1] ) );
 
     } else {
         // logika
@@ -282,7 +282,6 @@ function skaitmenuKiekisSkaiciuje( skaicius ) {
             }
         }
     }
-
 
     return skaicius + ' (' + kiekis + ')';
 }
@@ -307,4 +306,4 @@ console.log( skaitmenuKiekisSkaiciuje( 1/3 ) );
 console.log( skaitmenuKiekisSkaiciuje( 1000000000000000000000000000000000000000 ) );
 console.log( skaitmenuKiekisSkaiciuje( 1e+21 ) );
 console.log( skaitmenuKiekisSkaiciuje( -0.123456789012345678901234567890123456789 ) );
-// console.log( skaitmenuKiekisSkaiciuje( 1e-30 ) );
+console.log( skaitmenuKiekisSkaiciuje( 1e-30 ) );
