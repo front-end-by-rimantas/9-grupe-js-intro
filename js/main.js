@@ -189,3 +189,56 @@ for ( var i=nuo; i<=iki; i++ ) {
 }
 
 console.log( 'Skaičių intervale tarp '+nuo+' ir '+iki+', besidalinančių be liekanos iš '+daliklis+' yra '+kiekis+' vienetai.' );
+
+
+
+
+/****************************
+ * FUNKCIJOS
+ ****************************/
+
+console.log('****************************');
+console.log('* FUNKCIJOS');
+console.log('****************************');
+
+console.log('Tuscia funkcija');
+
+function tusciaFunkcija() {
+    // logika
+    return false;
+}
+
+console.log( tusciaFunkcija() );
+
+
+console.log('-------------');
+console.log('Skaiciu daugyba');
+
+function daugyba( skaicius1, skaicius2 ) {
+
+    if ( typeof( skaicius1 ) !== 'number' ||
+         typeof( skaicius2 ) !== 'number' ) {
+        return 'Kintamieji turi buti skaiciaus tipo.';
+    }
+
+    if ( !isFinite(skaicius1) ||
+         !isFinite(skaicius2)) {
+        return 'Kintamieji turi buti realus skaiciai.';
+    }
+
+    var sandauga = skaicius1 * skaicius2;
+    return sandauga;
+}
+
+console.log( daugyba( -5, '4' ) );
+console.log( daugyba( '-5', '4' ) );
+console.log( daugyba( -5, 'a' ) );
+console.log( daugyba( -5, [1, 2] ) );
+console.log( daugyba( 2, Infinity ) );
+console.log( daugyba( Infinity, 5 ) );
+console.log( daugyba( 2, NaN ) );
+console.log( daugyba( NaN, 5 ) );
+
+console.log( daugyba( 2, 3 ) );
+console.log( daugyba( -5, 4 ) );
+console.log( daugyba( 0, 0 ) );
